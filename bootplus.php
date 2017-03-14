@@ -1,6 +1,6 @@
 <?php
    /*
-   Plugin Name: Boot Plus
+   Plugin Name: Boot Plus Freeman Capital
    Plugin URI: http://breonwilliams.com
    Description: adds shortcodes
    Version: 1.1
