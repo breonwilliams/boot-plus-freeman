@@ -1,0 +1,10 @@
+
+header {
+    background: #fff;
+    padding: 40px;
+}
+
+#siteloader object {
+    width: 100%;
+    min-height: 100%;
+}

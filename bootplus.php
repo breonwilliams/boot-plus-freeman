@@ -17,23 +17,24 @@ $bootplus_shortcodes_name = "Boot Plus";
 function bootplus_shortcodes_add_scripts() {
   global $bootplus_shortcodes_directory, $bootplus_shortcodes_path;
   if(!is_admin()) {
-    
+
     /* Includes */
     include($bootplus_shortcodes_path.'/assets/functions.php');
-      wp_enqueue_style('style-css', $bootplus_shortcodes_directory.'assets/css/style.css');
-      wp_register_style( 'events-css', plugins_url( '/assets/css/recent-events.css', __FILE__ ), array(), '1.0.0', all );
-      wp_register_style( 'lity-css', plugins_url( '/assets/css/lity.css', __FILE__ ), array(), '1.0.0', all );
-      wp_register_style( 'bgvid-css', plugins_url( '/assets/css/background-vid.css', __FILE__ ), array(), '1.0.0', all );
-      wp_register_style( 'slick-css', plugins_url( '/assets/css/slick.css', __FILE__ ), array(), '1.0.0', all );
-      wp_register_style( 'slick-theme', plugins_url( '/assets/css/slick-theme.css', __FILE__ ), array(), '1.0.0', all );
-      wp_register_style( 'masonry-css', plugins_url( '/assets/css/masonry/styles.css', __FILE__ ), array(), '1.0.0', all );
-      wp_register_style( 'search-css', plugins_url( '/assets/css/search-overlay.css', __FILE__ ), array(), '1.0.0', all );
+    wp_enqueue_style('style-css', $bootplus_shortcodes_directory.'assets/css/style.css');
+    wp_register_style( 'events-css', plugins_url( '/assets/css/recent-events.css', __FILE__ ), array(), '1.0.0', all );
+    wp_register_style( 'lity-css', plugins_url( '/assets/css/lity.css', __FILE__ ), array(), '1.0.0', all );
+    wp_register_style( 'bgvid-css', plugins_url( '/assets/css/background-vid.css', __FILE__ ), array(), '1.0.0', all );
+    wp_register_style( 'slick-css', plugins_url( '/assets/css/slick.css', __FILE__ ), array(), '1.0.0', all );
+    wp_register_style( 'slick-theme', plugins_url( '/assets/css/slick-theme.css', __FILE__ ), array(), '1.0.0', all );
+    wp_register_style( 'masonry-css', plugins_url( '/assets/css/masonry/styles.css', __FILE__ ), array(), '1.0.0', all );
+    wp_register_style( 'search-css', plugins_url( '/assets/css/search-overlay.css', __FILE__ ), array(), '1.0.0', all );
     wp_register_style( 'dataTables-css', plugins_url( '/assets/css/datatables/datatables.min.css', __FILE__ ), array(), '1.0.0', all );
     wp_register_style( 'dataTables-bootstrap', plugins_url( '/assets/css/datatables/dataTables.bootstrap.min.css', __FILE__ ), array(), '1.0.0', all );
     wp_register_style( 'dataTables-buttons', plugins_url( '/assets/css/datatables/buttons.bootstrap.min.css', __FILE__ ), array(), '1.0.0', all );
     wp_register_style( 'dataTables-responsive', plugins_url( '/assets/css/datatables/responsive.bootstrap.min.css', __FILE__ ), array(), '1.0.0', all );
     wp_register_style( 'circle-css', plugins_url( '/assets/css/circle.css', __FILE__ ), array(), '1.0.0', all );
-        }}
+    wp_register_style( 'siteloader-css', plugins_url( '/assets/css/siteloader.css', __FILE__ ), array(), '1.0.0', all );
+  }}
 add_filter('init', 'bootplus_shortcodes_add_scripts');
 
 
@@ -67,6 +68,7 @@ function wpb_adding_scripts() {
   wp_register_script( 'moment-js', $bootplus_shortcodes_directory.'assets/js/datatables/moment.min.js', 'jquery','1.0',true);
   wp_register_script( 'datetime-js', $bootplus_shortcodes_directory.'assets/js/datatables/datetime-moment.js', 'jquery','1.0',true);
   wp_register_script( 'responsive-bootstrap', $bootplus_shortcodes_directory.'assets/js/datatables/responsive.bootstrap.min.js', 'jquery','1.0',true);
+  wp_register_script( 'siteloader-js', $bootplus_shortcodes_directory.'assets/js/siteloader.js', 'jquery','1.0',true);
 }
 
 add_action( 'wp_enqueue_scripts', 'wpb_adding_scripts' ); 

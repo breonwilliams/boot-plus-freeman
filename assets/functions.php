@@ -602,3 +602,25 @@ if(!function_exists('pippin_errors')) {
         return isset($wp_error) ? $wp_error : ($wp_error = new WP_Error(null, null, null));
     }
 }
+
+// site loader
+
+
+function siteloader( $atts, $content = null ) {
+    wp_enqueue_script( 'siteloader-js' );
+    wp_enqueue_style( 'siteloader-css' );
+
+    $atts = shortcode_atts(
+        array(
+            'class' => '',
+            'style' => '',
+        ), $atts, 'siteloader' );
+
+    $class = $atts['class'];
+    $style = $atts['style'];
+
+    return '<div id="siteloader" class="'.$class.'" style="'.$style.'" >' . do_shortcode($content) . '</div>';
+
+}
+
+add_shortcode('siteloader', 'siteloader');
