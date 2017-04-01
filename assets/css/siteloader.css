@@ -1,10 +1,6 @@
 
-header {
-    background: #fff;
-    padding: 40px;
-}
 
-#siteloader object {
+#siteloader object, #siteloader-tulsa object, #siteloader-pine object {
     width: 100%;
     min-height: 100%;
 }

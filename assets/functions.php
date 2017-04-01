@@ -624,3 +624,45 @@ function siteloader( $atts, $content = null ) {
 }
 
 add_shortcode('siteloader', 'siteloader');
+
+
+
+function siteloader_tulsa( $atts, $content = null ) {
+    wp_enqueue_script( 'siteloader-js' );
+    wp_enqueue_style( 'siteloader-css' );
+
+    $atts = shortcode_atts(
+        array(
+            'class' => '',
+            'style' => '',
+        ), $atts, 'siteloader_tulsa' );
+
+    $class = $atts['class'];
+    $style = $atts['style'];
+
+    return '<div id="siteloader-tulsa" class="'.$class.'" style="'.$style.'" >' . do_shortcode($content) . '</div>';
+
+}
+
+add_shortcode('siteloader_tulsa', 'siteloader_tulsa');
+
+
+
+function siteloader_pine( $atts, $content = null ) {
+    wp_enqueue_script( 'siteloader-js' );
+    wp_enqueue_style( 'siteloader-css' );
+
+    $atts = shortcode_atts(
+        array(
+            'class' => '',
+            'style' => '',
+        ), $atts, 'siteloader_pine' );
+
+    $class = $atts['class'];
+    $style = $atts['style'];
+
+    return '<div id="siteloader-pine" class="'.$class.'" style="'.$style.'" >' . do_shortcode($content) . '</div>';
+
+}
+
+add_shortcode('siteloader_pine', 'siteloader_pine');
