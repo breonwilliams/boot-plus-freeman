@@ -359,6 +359,8 @@ add_shortcode('popup_video', 'popup_video');
 function carousel_wrap( $atts, $content = null ) {
     wp_enqueue_script( 'slick-js' );
     wp_enqueue_script( 'slick-init' );
+    wp_enqueue_style( 'slick-css' );
+    wp_enqueue_style( 'slick-theme' );
     $atts = shortcode_atts(
         array(
             'class' => '',
